@@ -8,15 +8,15 @@ $ingresarUsuario = $_POST['ingresarUsuario'];
 $ingresarContrasena = $_POST['ingresarContrasena'];
 $ingresarTipo = $_POST['ingresarTipo'];
 
-if ($ingresarTipo == 'Seleccione') {
+if ($ingresarTipo == 0) {
     $respuesta = array('respuesta' => 'seleccion');
     echo json_encode($respuesta);
     return;
 } else {
-    if ($ingresarTipo == 'Director') {
-        $sql = "SELECT usuario.nombre, usuario.apellido, usuario.email, usuario.documento, usuario.direccion, usuario.telefono 
-        from usuario inner join rol on usuario.rol_usuario_rol_usuario_ID = rol.id_rol where usuario.email = '$ingresarUsuario' 
-        and usuario.contrasena = '$ingresarContrasena' and rol.descripcion = 'Director'";
+    if ($ingresarTipo == 1) {
+        $sql = "SELECT * FROM usuario
+        WHERE email = '$ingresarUsuario' 
+        AND contrasena = '$ingresarContrasena' AND rol_usuario_rol_usuario_ID = '$ingresarTipo'";
 
         $ejecutar = mysqli_query($conexion, $sql);
         $rowcount = mysqli_num_rows($ejecutar);
@@ -35,10 +35,9 @@ if ($ingresarTipo == 'Seleccione') {
             $respuesta = array('respuesta' => 'error');
         }
         echo json_encode($respuesta);
-    } else if ($ingresarTipo == 'Supervisor') {
-        $sql = "SELECT usuario.nombre, usuario.apellido, usuario.email, usuario.documento, usuario.direccion, usuario.telefono 
-        from usuario inner join rol on usuario.rol_usuario_rol_usuario_ID = rol.id_rol where usuario.email = '$ingresarUsuario' 
-        and usuario.contrasena = '$ingresarContrasena' and rol.descripcion = 'Supervisor'";
+    } else if ($ingresarTipo == 2) {
+        $sql = "SELECT * FROM usuario WHERE email = '$ingresarUsuario' 
+        and contrasena = '$ingresarContrasena' and descripcion = '$ingresarTipo'";
 
         $ejecutar = mysqli_query($conexion, $sql);
         $rowcount = mysqli_num_rows($ejecutar);

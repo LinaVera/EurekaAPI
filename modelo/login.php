@@ -31,9 +31,9 @@
                         <div class="group">
                             <label for="pass" class="label">Rol</label>
                             <select class="form-control" id="ingresarTipo" name="ingresarTipo">
-                                <option value="Seleccione">Seleccione el rol</option>
-                                <option value="Director">Director</option>
-                                <option value="Supervisor">Supervisor</option>
+                                <option value="0">Seleccione el rol</option>
+                                <option value="1">Director</option>
+                                <option value="2">Supervisor</option>
                             </select>
                         </div>
                         <div class="group">
