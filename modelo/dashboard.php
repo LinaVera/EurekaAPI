@@ -82,6 +82,7 @@ $rol = $_SESSION['rol'];
                                                         <a><?php echo $nombre; ?></a>
                                                     </h5>
                                                     <span class="email"><?php echo $email; ?></span>
+                                                    <span class="email"><?php echo $rol; ?></span>
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__body">

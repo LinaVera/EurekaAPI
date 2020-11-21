@@ -126,13 +126,15 @@ $email = $_SESSION['email'];
                                 <div class="card">
                                     <div class="card-header">Registrar supervisor </div>
                                     <div class="card-body card-block">
-                                        <form id= "FormRegistroSupervisor" name="FormRegistroSupervisor" action="registro.php" method="post" >
+                                        <form id="FormRegistroSupervisor" name="FormRegistroSupervisor"
+                                            action="registrar_supervisor.php" method="post">
                                             <div class="form-group">
                                                 <div class="input-group">
                                                     <div class="input-group-addon">
                                                         <i class="fa fa-user"></i>
                                                     </div>
-                                                    <input type="text" id="username" name="username" placeholder="Nombre" class="form-control">
+                                                    <input type="text" id="username" name="nombre"
+                                                        placeholder="Nombre" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -140,7 +142,8 @@ $email = $_SESSION['email'];
                                                     <div class="input-group-addon">
                                                         <i class="fa fa-user"></i>
                                                     </div>
-                                                    <input type="text" id="username" name="username" placeholder="Apellido" class="form-control">
+                                                    <input type="text" id="username" name="apellido"
+                                                        placeholder="Apellido" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -148,7 +151,8 @@ $email = $_SESSION['email'];
                                                     <div class="input-group-addon">
                                                         <i class="fa fa-credit-card"></i>
                                                     </div>
-                                                    <input type="text" id="username" name="username" placeholder="Documento" class="form-control">
+                                                    <input type="text" id="username" name="documento"
+                                                        placeholder="Documento" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -156,7 +160,8 @@ $email = $_SESSION['email'];
                                                     <div class="input-group-addon">
                                                         <i class="fa fa-home"></i>
                                                     </div>
-                                                    <input type="text" id="username" name="username" placeholder="Direcci&oacute;n" class="form-control">
+                                                    <input type="text" id="username" name="direccion"
+                                                        placeholder="Direcci&oacute;n" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -164,7 +169,8 @@ $email = $_SESSION['email'];
                                                     <div class="input-group-addon">
                                                         <i class="fa fa-phone"></i>
                                                     </div>
-                                                    <input type="text" id="username" name="username" placeholder="Tel&eacute;fono" class="form-control">
+                                                    <input type="text" id="username" name="telefono"
+                                                        placeholder="Tel&eacute;fono" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -172,7 +178,8 @@ $email = $_SESSION['email'];
                                                     <div class="input-group-addon">
                                                         <i class="fa fa-envelope"></i>
                                                     </div>
-                                                    <input type="email" id="email" name="email" placeholder="Email" class="form-control">
+                                                    <input type="email" id="email" name="email" placeholder="Email"
+                                                        class="form-control">
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -180,7 +187,8 @@ $email = $_SESSION['email'];
                                                     <div class="input-group-addon">
                                                         <i class="fa fa-asterisk"></i>
                                                     </div>
-                                                    <input type="password" id="password" name="password" placeholder="Contraseña" class="form-control">
+                                                    <input type="password" id="password" name="contrasena"
+                                                        placeholder="Contraseña" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -188,7 +196,8 @@ $email = $_SESSION['email'];
                                                     <div class="input-group-addon">
                                                         <i class="fa fa-asterisk"></i>
                                                     </div>
-                                                    <input type="password" id="password" name="password" placeholder="Repita la contraseña" class="form-control">
+                                                    <input type="password" id="password" name="contrasena2"
+                                                        placeholder="Repita la contraseña" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="form-actions form-group">
@@ -205,7 +214,7 @@ $email = $_SESSION['email'];
                                 <div class="copyright">
                                     <p>Copyright ©
                                         <script>
-                                            document.write(new Date().getFullYear());
+                                        document.write(new Date().getFullYear());
                                         </script>. All rights reserved.
                                     </p>
                                 </div>

@@ -27,17 +27,19 @@ if ($ingresarTipo == 0) {
             $_SESSION['rol'] = 1;
             $_SESSION['nombre'] = $row['nombre'];
             $_SESSION['email'] = $row['email'];
+            $_SESSION['rol'] = $row['rol_usuario_rol_usuario_ID'];
             $respuesta = array(
                 'respuesta' => 'exitoso',
-                'rol' => 'supervisor'
+                'rol' => 'director'
             );
         } else {
             $respuesta = array('respuesta' => 'error');
         }
         echo json_encode($respuesta);
     } else if ($ingresarTipo == 2) {
-        $sql = "SELECT * FROM usuario WHERE email = '$ingresarUsuario' 
-        and contrasena = '$ingresarContrasena' and descripcion = '$ingresarTipo'";
+        $sql = "SELECT * FROM usuario
+        WHERE email = '$ingresarUsuario' 
+        AND contrasena = '$ingresarContrasena' AND rol_usuario_rol_usuario_ID = '$ingresarTipo'";
 
         $ejecutar = mysqli_query($conexion, $sql);
         $rowcount = mysqli_num_rows($ejecutar);
@@ -48,9 +50,10 @@ if ($ingresarTipo == 0) {
             $_SESSION['rol'] = 2;
             $_SESSION['nombre'] = $row['nombre'];
             $_SESSION['email'] = $row['email'];
+            $_SESSION['rol'] = $row['rol_usuario_rol_usuario_ID'];
             $respuesta = array(
                 'respuesta' => 'exitoso',
-                'rol' => 'director'
+                'rol' => 'supervisor'
             );
         } else {
             $respuesta = array('respuesta' => 'error');
