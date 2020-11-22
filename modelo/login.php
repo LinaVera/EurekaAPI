@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EUREKA</title>
+    
     <link href="../vista/css/estilo.css" rel="stylesheet">
     <!-- Custom style Sweetalert2 -->
     <link href="../vista/css/sweetalert2.min.css" rel="stylesheet">
@@ -41,7 +42,7 @@
                         </div>
                         <div class="hr"></div>
                         <div class="foot-lnk">
-                            <a href="#forgot"><i style="color: blue;">¿Olvidastes tu contraseña?</i></a>
+                            <a href="re.php"><i style="color: blue;">¿Olvidastes tu contraseña?</i></a>
                         </div>
                     </div>
                 </div>
